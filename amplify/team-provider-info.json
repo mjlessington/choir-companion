@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-choircompanion-dev-120210-authRole",
+            "UnauthRoleArn": "arn:aws:iam::256317557938:role/amplify-choircompanion-dev-120210-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::256317557938:role/amplify-choircompanion-dev-120210-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-choircompanion-dev-120210-deployment",
+            "UnauthRoleName": "amplify-choircompanion-dev-120210-unauthRole",
+            "StackName": "amplify-choircompanion-dev-120210",
+            "StackId": "arn:aws:cloudformation:us-east-2:256317557938:stack/amplify-choircompanion-dev-120210/0309b3c0-e0a3-11ea-a517-066b3d820a3c",
+            "AmplifyAppId": "d2z8l038f1n14n"
+        }
+    }
+}

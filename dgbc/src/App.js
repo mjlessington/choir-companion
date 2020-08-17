@@ -12,7 +12,7 @@ import AppNav from './components/AppNav'
 function App() {
   return (
     <div className="App">
-      <Login />
+      
       <AppNav />
       <Store>
         <MainChat />

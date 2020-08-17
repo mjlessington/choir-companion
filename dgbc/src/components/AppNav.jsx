@@ -7,8 +7,8 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-
-import Logout from './Logout.jsx';
+import Login from './Login'
+import Logout from './Logout';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,10 +33,10 @@ const useStyles = makeStyles((theme) => ({
                 <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-                Choir Companion
+                Choir Companion    
             </Typography>
-                <Logout />
-        
+            <Login />
+            <Logout />
             </Toolbar>
         </AppBar>
         </div>

@@ -9,6 +9,7 @@ import Divider from '@material-ui/core/Divider';
 import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import Avatar from '@material-ui/core/Avatar';
 
 import {CTX} from './Store.js'
 
@@ -58,9 +59,9 @@ const useStyles = makeStyles((theme) => ({
     //local state
     const [activeSection, changeActiveSection]= React.useState(sections[0])
     const [textValue, changeTextValue]= React.useState('');
-  
+
     return (
-     <div>
+        <div>
         <Paper className={classes.root} elevation={3}>
             <Typography variant="h4" component="h4">
                 Chit Chat
@@ -87,7 +88,8 @@ const useStyles = makeStyles((theme) => ({
                         {
                             allChats[activeSection].map((chat, i) => (
                                 <div className={classes.flex} key={i}> 
-                                <Chip label={chat.from.name} className={classes.chip} />
+                                <Avatar src={chat.from.picture} />
+                                {/* <Chip label={chat.from.name} className={classes.chip} /> */}
                                 <Typography variant="body1" gutterBottom> {chat.msg} </Typography>
                                 </div>
 

@@ -54,7 +54,7 @@ export default function Store(props) {
 
 
     if (!socket) {
-        socket = io(':3001');
+        socket = io('https://boiling-mountain-73791.herokuapp.com/');
         socket.on('chat message', function(msg){
             console.log({msg});
             dispatch({type: 'RECEIVE_MESSAGE', payload:msg});

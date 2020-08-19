@@ -104,7 +104,10 @@ const useStyles = makeStyles((theme) => ({
                 className={classes.chatBox} 
                 variant="filled"
                 value={textValue} 
-                onChange={e => changeTextValue(e.target.value)}/>
+                onChange={e => changeTextValue(e.target.value)}
+                onKeyPress={e => e.key === 'Enter' ? changeTextValue(e.target.value) : null}
+                />
+                
             <Button 
                 variant="contained" 
                 color="primary"
@@ -113,10 +116,7 @@ const useStyles = makeStyles((theme) => ({
                     sendChatAction({ from: user, msg:textValue, section: activeSection}); 
                     changeTextValue('');
                 }}
-                onKeydown={() => {
-                    sendChatAction({ from: user, msg:textValue, section: activeSection}); 
-                    changeTextValue('');
-                }}
+                
                 
                 >
                 Send

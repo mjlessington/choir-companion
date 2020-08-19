@@ -58,13 +58,13 @@ export default function Store(props) {
         socket.on('chat message', function(msg){
             console.log({msg});
             dispatch({type: 'RECEIVE_MESSAGE', payload:msg});
-          });
+            });
         
     }
     
-   
+
 const { user} = useAuth0();  
-   
+
         return (
             <CTX.Provider value={{allChats, sendChatAction, user}}>
                {props.children} 

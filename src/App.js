@@ -3,8 +3,6 @@ import './App.css';
 import 'fontsource-roboto';
 import MainChat from './components/MainChat.js'
 import Store from './components/Store.js'
-import Login from './components/Login'
-
 import AppNav from './components/AppNav'
 
 

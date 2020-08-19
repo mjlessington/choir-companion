@@ -1,71 +1,43 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-
+import { Link } from 'react-router-dom'
+import {Navbar, Nav, Button, Form, FormControl} from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './Login'
-import Logout from './Logout';
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-    flexGrow: 1,
-    },
-    menuButton: {
-    marginRight: theme.spacing(2),
-    },
-    title: {
-        flexGrow: 1,
-    },
-    }));
-
-    export default function ButtonAppBar() {
-    const classes = useStyles();
-    const [anchorEl, setAnchorEl] = React.useState(null);
-
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+import Logout from './Logout'
 
 
-
+export default function NavBar() {
     return (
-        <div className={classes.root}>
-        <AppBar position="static">
-            <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+        
+        <Navbar bg="dark" expand="lg" variant="dark">
+            <Navbar.Brand href="#home">Choir Companion</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
                 
-                <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+                <Button variant='danger'>
+                    <Login />
+                </Button>  
+                <Button variant='link'>
+                    <Logout />
                 </Button>
-                <Menu
-                    id="simple-menu"
-                    anchorEl={anchorEl}
-                    keepMounted
-                    open={Boolean(anchorEl)}
-                    onClose={handleClose}>
-                    <MenuItem onClick={handleClose} href= 'https://drive.google.com/drive/folders/1oD3sKUIJ_p_2V1PKR8S3zc2-kQhX0Rqd?usp=sharing' >Choir Docs</MenuItem>
-                    <MenuItem onClick={handleClose} href='https://www.musixmatch.com/'>Find Lyrics </MenuItem>
-                    <MenuItem onClick={handleClose}>Schedule</MenuItem>
-                </Menu>
-               
+                <Nav.Link href=''>Schedule</Nav.Link>
+                <Nav.Link href='https://drive.google.com/drive/folders/1oD3sKUIJ_p_2V1PKR8S3zc2-kQhX0Rqd?usp=sharing'>Docs</Nav.Link>
+                <Nav.Link href='https://www.musixmatch.com/'>Find Lyrics</Nav.Link>
+            </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+    )
+}
 
-            </IconButton>
-            <Typography variant="h6" className={classes.title}>
-                Choir Companion    
+
+
+
+                {/* <Link href="https://drive.google.com/drive/folders/1oD3sKUIJ_p_2V1PKR8S3zc2-kQhX0Rqd?usp=sharing" onClick={preventDefault} color="inherit">
+                    Choir Docs
+                </Link>
+                <Link href="https://www.musixmatch.com/" onClick={preventDefault} color='inherit'>
+                    Find Lyrics
+                </Link>
             </Typography>
-            <Login />
-            <Logout />
-            </Toolbar>
-        </AppBar>
-        </div>
-    );
-    }
+                 */}

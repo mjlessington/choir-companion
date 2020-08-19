@@ -105,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
                 variant="filled"
                 value={textValue} 
                 onChange={e => changeTextValue(e.target.value)}
-                onKeyPress={e => e.key === 'Enter' ? changeTextValue(e.target.value) : null}
+                // onKeyPress={e => e.key === 'Enter' ? changeTextValue(e.target.value) : null}
                 />
                 
             <Button 

@@ -33,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
     chatWindow: {
         width: '70%',
         height: '300px',
-        padding: '10px'
+        padding: '10px',
+        overflow: 'auto'
 
     },
     chatBox: {
@@ -109,6 +110,10 @@ const useStyles = makeStyles((theme) => ({
                 color="primary"
                 className={classes.button}
                 onClick={() => {
+                    sendChatAction({ from: user, msg:textValue, section: activeSection}); 
+                    changeTextValue('');
+                }}
+                onKeypress={() => {
                     sendChatAction({ from: user, msg:textValue, section: activeSection}); 
                     changeTextValue('');
                 }}

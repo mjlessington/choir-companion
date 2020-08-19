@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
         <AppBar position="static">
             <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                <MenuIcon>
+                
                 <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                 </Button>
                 <Menu
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
                     <MenuItem onClick={handleClose} href='https://www.musixmatch.com/'>Find Lyrics </MenuItem>
                     <MenuItem onClick={handleClose}>Schedule</MenuItem>
                 </Menu>
-                </MenuIcon>
+               
 
             </IconButton>
             <Typography variant="h6" className={classes.title}>

@@ -113,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
                     sendChatAction({ from: user, msg:textValue, section: activeSection}); 
                     changeTextValue('');
                 }}
-                onKeypress={() => {
+                onKeydown={() => {
                     sendChatAction({ from: user, msg:textValue, section: activeSection}); 
                     changeTextValue('');
                 }}

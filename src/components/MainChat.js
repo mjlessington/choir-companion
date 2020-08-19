@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
         <div>
         <Paper className={classes.root} elevation={3}>
             <Typography variant="h4" component="h4">
-                Chit Chat
+                Choir Chat
             </Typography>
             <Typography variant="h6" gutterBottom>
                 {activeSection}
